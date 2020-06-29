@@ -16,7 +16,7 @@ The day of the week is specified in spanish:
   - Sabado
   - Domingo
   
-Calendars are saved in json format in the <data> directory. If it doesn´t exist, it will be created automatically.
+Calendars are saved in json format in the <data> directory as .sv(it stands for save) files. If it doesn´t exist, it will be created automatically.
 There´s some examples of data files in this repository.
   
 Tkinter is needed to run this app. Tkinter is included in the python standard library.
