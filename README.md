@@ -19,8 +19,8 @@ The day of the week is specified in spanish:
 Calendars are saved in json format in the <data> directory. If it doesn´t exist, it will be created automatically.
 There´s some examples of data files in this repository.
   
-The libraries needed to run this app will be specified in the requirements file.
-To install this libraries, just use: pip install -r requirements.txt
+Tkinter is needed to run this app. Tkinter is included in the python standard library.
+The json library is also needed.
 
 To run the app, just execute the app_calendario.pyw file. It can be done by double-clicking it or by using the following command:
 python/python3 app_calendario.pyw
