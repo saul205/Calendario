@@ -2,8 +2,8 @@ import calendario as cal
 from tkinter import font
 from tkinter import *
 from functools import partial
-from os import scandir, getcwd
-from os.path import abspath
+from os import scandir, getcwd, mkdir
+from os.path import abspath, isdir
 
 meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
          "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
@@ -126,6 +126,11 @@ def salir(entry1, entry2, entry3):
 def comprobar_existencia(anyo):
     ruta = getcwd()+"\\data"
     encontrado = False
+
+    if not isdir(ruta):
+        mkdir(ruta)
+        return
+    
     archivos = scandir(ruta)
     
     for archivo in archivos:
@@ -173,7 +178,10 @@ def definir_menu(mainframe):
                           text = "Start", width = 25, bg = 'white', pady = 5))
     widgets[-1].pack()
     
-    return widgets, fecha   
+    return widgets, fecha
+
+
+# MAIN CODE
 
 root = Tk()
 
